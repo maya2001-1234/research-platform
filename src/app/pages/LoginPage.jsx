@@ -1,6 +1,5 @@
-import { Link } from "react-router";
-import { Sparkles, Mail, Lock, Chrome } from "lucide-react";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { Sparkles } from "lucide-react";
 
 export function LoginPage() {
   return (
@@ -21,6 +20,13 @@ export function LoginPage() {
           <p className="text-gray-600">
             Sign in to continue your research journey
           </p>
+
+          <Link
+            to="/register"
+            className="text-[#0ea5e9] hover:underline font-medium"
+          >
+            Sign up
+          </Link>
         </div>
       </div>
     </div>
