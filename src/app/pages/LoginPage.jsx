@@ -46,6 +46,21 @@ export function LoginPage() {
                   />
                 </div>
               </div>
+              <div className="flex items-center justify-between text-sm">
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" className="rounded" />
+                  <span className="text-gray-600">Remember me</span>
+                </label>
+                <a href="#" className="text-[#0ea5e9] hover:underline">
+                  Forgot password?
+                </a>
+              </div>
+              <Link
+                to="/app"
+                className="block w-full py-3 rounded-lg bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] text-white hover:opacity-90 transition-opacity text-center shadow-lg shadow-blue-500/30"
+              >
+                Sign In
+              </Link>
             </div>
           </form>
         </div>
