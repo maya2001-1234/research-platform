@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Sparkles, Mail, Lock } from "lucide-react";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 export function LoginPage() {
   return (
@@ -63,6 +64,21 @@ export function LoginPage() {
               </Link>
             </div>
           </form>
+          <div className="my-6 flex items-center gap-4">
+            <div className="flex-1 h-px bg-gray-200" />
+            <span className="text-sm text-gray-500">Or continue with</span>
+            <div className="flex-1 h-px bg-gray-200" />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <button className="flex items-center justify-center gap-2 py-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors text-gray-700">
+              <FaGithub className="w-5 h-5" />
+              GitHub
+            </button>
+            <button className="flex items-center justify-center gap-2 py-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors text-gray-700">
+              <FaGoogle className="w-5 h-5" />
+              Google
+            </button>
+          </div>
         </div>
       </div>
     </div>
