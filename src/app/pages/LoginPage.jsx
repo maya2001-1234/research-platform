@@ -79,6 +79,15 @@ export function LoginPage() {
               Google
             </button>
           </div>
+          <p className="mt-6 text-center text-sm text-gray-600">
+            Don't have an account?{" "}
+            <Link
+              to="/register"
+              className="text-[#0ea5e9] hover:underline font-medium"
+            >
+              Sign up
+            </Link>
+          </p>
         </div>
       </div>
     </div>
