@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Sparkles, Mail, User } from "lucide-react";
+import { Sparkles, Mail, User, Lock } from "lucide-react";
 
 export function RegisterPage() {
   return (
@@ -45,6 +45,19 @@ export function RegisterPage() {
                 <input
                   type="email"
                   placeholder="your.email@example.com"
+                  className="w-full pl-11 pr-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#0ea5e9] focus:ring-2 focus:ring-blue-100 focus:outline-none transition-all"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="block mb-2 text-sm text-gray-700">
+                Password
+              </label>
+              <div className="relative">
+                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="password"
+                  placeholder="Create a strong password"
                   className="w-full pl-11 pr-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#0ea5e9] focus:ring-2 focus:ring-blue-100 focus:outline-none transition-all"
                 />
               </div>
