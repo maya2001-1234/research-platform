@@ -99,6 +99,15 @@ export function RegisterPage() {
               Google
             </button>
           </div>
+          <p className="mt-6 text-center text-sm text-gray-600">
+            Already have an account?{" "}
+            <Link
+              to="/login"
+              className="text-[#0ea5e9] hover:underline font-medium"
+            >
+              Sign in
+            </Link>
+          </p>
         </div>
       </div>
     </div>
