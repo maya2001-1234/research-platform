@@ -69,5 +69,15 @@ export function Leaderboard() {
     };
     return colors[badge] || "from-[#0ea5e9] to-[#06b6d4]";
   };
-  
+  return (
+    <div className="p-6 max-w-6xl mx-auto">
+      <div className="mb-8">
+        <h1 className="text-3xl mb-2 text-gray-900">Leaderboard</h1>
+        <p className="text-gray-600">
+          Top contributors in the research community
+        </p>
+      </div>
+      
+    </div>
+  );
 }
