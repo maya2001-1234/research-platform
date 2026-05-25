@@ -75,6 +75,12 @@ export function RegisterPage() {
                 </a>
               </span>
             </label>
+            <Link
+              to="/app"
+              className="block w-full py-3 rounded-lg bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] text-white hover:opacity-90 transition-opacity text-center shadow-lg shadow-blue-500/30"
+            >
+              Create Account
+            </Link>
           </form>
         </div>
       </div>
