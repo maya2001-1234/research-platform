@@ -13,7 +13,14 @@ export function RegisterPage() {
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0ea5e9] to-[#a855f7] flex items-center justify-center shadow-lg shadow-blue-500/30">
               <Sparkles className="w-7 h-7 text-white" />
             </div>
+            <span className="text-2xl font-semibold text-gray-900">
+              ResearchHub
+            </span>
           </Link>
+          <h1 className="text-3xl mb-2 text-gray-900">Create Account</h1>
+          <p className="text-gray-600">
+            Join the collaborative research community
+          </p>
         </div>
       </div>
     </div>
