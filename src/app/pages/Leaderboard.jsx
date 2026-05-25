@@ -1,3 +1,61 @@
 export function Leaderboard() {
-  return <div className="min-h-screen p-8">Leaderboard</div>;
+  const [timeframe, setTimeframe] =
+    (useState < "week") | "month" | ("all" > "week");
+  const topUsers = [
+    {
+      rank: 1,
+      name: "Dr. Emily Watson",
+      username: "emilywatson",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily",
+      reputation: 4560,
+      solutions: 89,
+      badge: "Expert",
+      level: 28,
+      trend: "+12%",
+    },
+    {
+      rank: 2,
+      name: "Alex Rivera",
+      username: "alexrivera",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+      reputation: 3200,
+      solutions: 67,
+      badge: "Mentor",
+      level: 22,
+      trend: "+8%",
+    },
+    {
+      rank: 3,
+      name: "Sarah Chen",
+      username: "sarahchen",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+      reputation: 2340,
+      solutions: 54,
+      badge: "Collaborator",
+      level: 18,
+      trend: "+15%",
+    },
+    {
+      rank: 4,
+      name: "Mike Johnson",
+      username: "mikejohnson",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mike",
+      reputation: 1890,
+      solutions: 43,
+      badge: "Problem Solver",
+      level: 15,
+      trend: "+5%",
+    },
+    {
+      rank: 5,
+      name: "John Doe",
+      username: "johndoe",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=John",
+      reputation: 1240,
+      solutions: 47,
+      badge: "Collaborator",
+      level: 12,
+      trend: "+10%",
+    },
+  ];
 }
