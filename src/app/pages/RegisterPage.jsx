@@ -62,6 +62,19 @@ export function RegisterPage() {
                 />
               </div>
             </div>
+            <label className="flex items-start gap-2 cursor-pointer text-sm">
+              <input type="checkbox" className="mt-1 rounded" />
+              <span className="text-gray-600">
+                I agree to the{" "}
+                <a href="#" className="text-[#0ea5e9] hover:underline">
+                  Terms of Service
+                </a>{" "}
+                and{" "}
+                <a href="#" className="text-[#0ea5e9] hover:underline">
+                  Privacy Policy
+                </a>
+              </span>
+            </label>
           </form>
         </div>
       </div>
