@@ -108,10 +108,13 @@ export function Leaderboard() {
                 : "border border-gray-200 text-gray-700 hover:bg-gray-100"
             }`}
           >
-            All Time 
+            All Time
           </button>
         </div>
-        
+        <div className="flex items-center gap-2 text-sm text-gray-500">
+          <TrendingUp className="w-4 h-4" />
+          Updated live
+        </div>
       </div>
     </div>
   );
