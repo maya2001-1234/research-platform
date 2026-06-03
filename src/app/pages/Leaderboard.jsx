@@ -174,6 +174,37 @@ export function Leaderboard() {
           </div>
         ))}
       </div>
+      <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-gray-200 bg-gray-50">
+                <th className="px-6 py-4 text-left text-sm text-gray-600">
+                  Rank
+                </th>
+                <th className="px-6 py-4 text-left text-sm text-gray-600">
+                  User
+                </th>
+                <th className="px-6 py-4 text-left text-sm text-gray-600">
+                  Badge
+                </th>
+                <th className="px-6 py-4 text-right text-sm text-gray-600">
+                  Level
+                </th>
+                <th className="px-6 py-4 text-right text-sm text-gray-600">
+                  Reputation
+                </th>
+                <th className="px-6 py-4 text-right text-sm text-gray-600">
+                  Solutions
+                </th>
+                <th className="px-6 py-4 text-right text-sm text-gray-600">
+                  Trend
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
