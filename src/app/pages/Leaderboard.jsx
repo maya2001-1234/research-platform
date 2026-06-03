@@ -14,7 +14,7 @@ export function Leaderboard() {
       badge: "Expert",
       level: 28,
       trend: "+12%",
-    }, 
+    },
     {
       rank: 2,
       name: "Alex Rivera",
@@ -77,7 +77,21 @@ export function Leaderboard() {
           Top contributors in the research community
         </p>
       </div>
-      
+
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex gap-2">
+          <button
+            onClick={() => setTimeframe("week")}
+            className={`px-4 py-2 rounded-lg transition-all ${
+              timeframe === "week"
+                ? "bg-gradient-to-r from-[#0ea5e9]/10 to-[#a855f7]/10 border border-[#0ea5e9] text-[#0ea5e9] shadow-sm"
+                : "border border-gray-200 text-gray-700 hover:bg-gray-100"
+            }`}
+          >
+            This week
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
