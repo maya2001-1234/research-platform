@@ -168,8 +168,10 @@ export function Leaderboard() {
                   Level {user.level}
                 </span>
               </div>
-              <h3 className="text-xl mb-1 text-gray-900">{user.name}</h3>
-              <p className="text-sm text-gray-600 mb-3">@{user.username}</p>
+              <div className="text-2xl bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] bg-clip-text text-transparent">
+                {user.reputation.toLocaleString()}
+              </div>
+              <div className="text-sm text-gray-600">reputation</div>
             </div>
           </div>
         ))}
