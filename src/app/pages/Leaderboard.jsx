@@ -245,6 +245,18 @@ export function Leaderboard() {
                       </div>
                     </div>
                   </td>
+                  <td className="px-6 py-4">
+                    <span
+                      className={`inline-block px-3 py-1 rounded-full text-xs bg-gradient-to-r ${getBadgeColor(user.badge)} text-white shadow-sm`}
+                    >
+                      {user.badge}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-right">
+                    <span className="text-[#0ea5e9] font-medium">
+                      Level {user.level}
+                    </span>
+                  </td>
                 </tr>
               ))}
             </tbody>
