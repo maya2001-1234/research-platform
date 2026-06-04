@@ -290,9 +290,29 @@ export function Leaderboard() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"></div>
+        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#06b6d4] to-[#a855f7] flex items-center justify-center shadow-lg shadow-cyan-500/20">
+              <Award className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h3 className="text-gray-900">Top Contributor</h3>
+              <p className="text-sm text-gray-600">Sarah Chen</p>
+            </div>
+          </div>
+        </div>
 
-        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"></div>
+        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#a855f7] to-[#0ea5e9] flex items-center justify-center shadow-lg shadow-purple-500/20">
+              <Trophy className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h3 className="text-gray-900">Rising Star</h3>
+              <p className="text-sm text-gray-600">John Doe</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
