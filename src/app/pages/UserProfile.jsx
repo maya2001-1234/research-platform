@@ -26,5 +26,42 @@ export function UserProfile() {
     streak: 12,
   };
 
-  
+  const badges = [
+    {
+      name: "First Solution",
+      icon: CheckCircle,
+      color: "from-[#10b981] to-[#06b6d4]",
+      earned: true,
+    },
+    {
+      name: "Collaborator",
+      icon: Star,
+      color: "from-[#0ea5e9] to-[#a855f7]",
+      earned: true,
+    },
+    {
+      name: "Expert",
+      icon: Award,
+      color: "from-[#a855f7] to-[#0ea5e9]",
+      earned: true,
+    },
+    {
+      name: "Problem Solver",
+      icon: Target,
+      color: "from-[#06b6d4] to-[#10b981]",
+      earned: true,
+    },
+    {
+      name: "Mentor",
+      icon: Trophy,
+      color: "from-[#f59e0b] to-[#0ea5e9]",
+      earned: false,
+    },
+    {
+      name: "Community Hero",
+      icon: Flame,
+      color: "from-[#0ea5e9] to-[#06b6d4]",
+      earned: false,
+    },
+  ];
 }
