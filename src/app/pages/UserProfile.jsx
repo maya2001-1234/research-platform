@@ -1,17 +1,5 @@
 import { useParams } from "react-router-dom";
-import {
-  Award,
-  Calendar,
-  MapPin,
-  Link as LinkIcon,
-  Mail,
-  Star,
-  Trophy,
-  Flame,
-  Target,
-  MessageSquare,
-  CheckCircle,
-} from "lucide-react";
+
 import { useState } from "react";
 
 export function UserProfile() {
