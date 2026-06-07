@@ -26,3 +26,12 @@ export function PostProblem() {
       setSelectedTags([...selectedTags, tag]);
     }
   };
+
+return (
+    <div className="p-6 max-w-5xl mx-auto">
+      <div className="mb-8">
+        <h1 className="text-3xl mb-2 text-gray-900">Post a Problem</h1>
+        <p className="text-gray-600">Share your challenge with the research community</p>
+      </div>
+
+
