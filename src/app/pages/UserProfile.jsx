@@ -1,4 +1,17 @@
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
+import {
+  Award,
+  Calendar,
+  MapPin,
+  Link as LinkIcon,
+  Mail,
+  Star,
+  Trophy,
+  Flame,
+  Target,
+  MessageSquare,
+  CheckCircle,
+} from "lucide-react";
 import { useState } from "react";
 
 export function UserProfile() {
@@ -62,6 +75,26 @@ export function UserProfile() {
       icon: Flame,
       color: "from-[#0ea5e9] to-[#06b6d4]",
       earned: false,
+    },
+  ];
+  const recentActivity = [
+    {
+      type: "solution",
+      title: "Provided verified solution for 'GPU Memory Optimization'",
+      time: "2 hours ago",
+      upvotes: 23,
+    },
+    {
+      type: "comment",
+      title: "Commented on 'Data Pipeline Architecture'",
+      time: "5 hours ago",
+      upvotes: 8,
+    },
+    {
+      type: "problem",
+      title: "Posted 'Quantum Computing Algorithm Challenge'",
+      time: "1 day ago",
+      upvotes: 15,
     },
   ];
 }
