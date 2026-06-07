@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
-
+import { Award, Star, Trophy, Flame, Target, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 export function UserProfile() {
-  const { username } = useParams();
-  const [activeTab, setActiveTab] =
-    (useState < "activity") | "solutions" | ("badges" > "activity");
+  const { username = "" } = useParams();
+  const [activeTab, setActiveTab] = useState<
+  "activity" | "solutions" | "badges"
+>("activity");
 
   const profile = {
     name: "John Doe",
@@ -85,4 +86,10 @@ export function UserProfile() {
       upvotes: 15,
     },
   ];
+  return (
+    <div>
+      User Profile
+      <h1>{username}</h1>
+    </div>
+  );
 }
