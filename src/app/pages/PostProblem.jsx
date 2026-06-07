@@ -34,4 +34,12 @@ return (
         <p className="text-gray-600">Share your challenge with the research community</p>
       </div>
 
-
+      <div className="space-y-6">
+        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <label className="block mb-2 text-gray-900">Problem Title</label>
+          <input
+            type="text"
+            placeholder="Describe your problem in one clear sentence..."
+            className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#0ea5e9] focus:ring-2 focus:ring-blue-100 focus:outline-none transition-all text-gray-900"
+          />
+        </div>
