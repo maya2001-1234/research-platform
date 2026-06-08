@@ -134,4 +134,9 @@ Looking for optimization techniques or alternative architectures that could work
               {tag}
             </span>
           ))}
-        </div>   
+        </div>  
+
+        <div className="prose prose-gray max-w-none mb-6">
+          <p className="text-gray-700 whitespace-pre-line">{problem.description}</p>
+        </div>
+ 
