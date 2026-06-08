@@ -3,10 +3,7 @@ import { Award, Star, Trophy, Flame, Target, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 export function UserProfile() {
-  const { username = "" } = useParams();
-  const [activeTab, setActiveTab] =
-    (useState < "activity") | "solutions" | ("badges" > "activity");
-
+  const [activeTab, setActiveTab] = useState("activity");
   const profile = {
     name: "John Doe",
     username: "johndoe",
@@ -111,6 +108,8 @@ export function UserProfile() {
                 </div>
               </div>
             </div>
+            <p className="text-lg mb-4 text-gray-700">{profile.bio}</p>
+            
           </div>
         </div>
       </div>
