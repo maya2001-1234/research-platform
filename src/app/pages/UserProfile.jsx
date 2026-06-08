@@ -95,7 +95,7 @@ export function UserProfile() {
     <div className="p-6">
       <div className="max-w-6xl mx-auto space-y-6">
         <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
-          <div className="h-32 bg-gradient-to-r from-[#0ea5e9] to-[#a855f7]" />
+          <div className="h-32 bg-blue-900" />
           <div className="px-8 pb-8">
             <div className="flex items-end gap-6 -mt-16 mb-6">
               <img
