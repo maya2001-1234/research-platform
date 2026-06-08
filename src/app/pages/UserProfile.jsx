@@ -1,15 +1,21 @@
 import { useParams } from "react-router-dom";
-import { Award, Star, Trophy, Flame, Target, CheckCircle } from "lucide-react";
+import {
+  Award,
+  Star,
+  Trophy,
+  Flame,
+  Target,
+  CheckCircle,
+  MapPin,
+  LinkIcon,
+} from "lucide-react";
 import { useState } from "react";
 
 export function UserProfile() {
-  const { username = "" } = useParams();
-  const [activeTab, setActiveTab] =
-    (useState < "activity") | "solutions" | ("badges" > "activity");
-
+  const [activeTab, setActiveTab] = useState("activity");
   const profile = {
-    name: "John Doe",
-    username: "johndoe",
+    name: "Dasun Kavinda",
+    username: "dasunkavinda",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=John",
     bio: "Machine Learning Engineer | PhD Candidate | Open Source Enthusiast",
     location: "San Francisco, CA",
@@ -89,7 +95,7 @@ export function UserProfile() {
     <div className="p-6">
       <div className="max-w-6xl mx-auto space-y-6">
         <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
-          <div className="h-32 bg-gradient-to-r from-[#0ea5e9] to-[#a855f7]" />
+          <div className="h-32 bg-blue-900" />
           <div className="px-8 pb-8">
             <div className="flex items-end gap-6 -mt-16 mb-6">
               <img
@@ -109,6 +115,17 @@ export function UserProfile() {
                     Edit Profile
                   </button>
                 </div>
+              </div>
+            </div>
+            <p className="text-lg mb-4 text-gray-700">{profile.bio}</p>
+
+            <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-6"></div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                <div className="text-2xl mb-1 bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent">
+                  {profile.reputation}
+                </div>
+                <div className="text-sm text-gray-600">Reputation</div>
               </div>
             </div>
           </div>
