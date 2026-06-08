@@ -165,3 +165,29 @@ Looking for optimization techniques or alternative architectures that could work
           </div>
         )}
       </div>
+
+       <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+        <div className="flex border-b border-gray-200">
+          <button
+            onClick={() => setActiveTab("discussion")}
+            className={`flex-1 px-6 py-4 flex items-center justify-center gap-2 transition-all ${
+              activeTab === "discussion"
+                ? "bg-gradient-to-r from-[#0ea5e9]/10 to-[#a855f7]/10 border-b-2 border-[#0ea5e9] text-[#0ea5e9]"
+                : "text-gray-600 hover:bg-gray-50"
+            }`}
+          >
+            <MessageSquare className="w-5 h-5" />
+            Discussion ({problem.stats.responses})
+          </button>
+          <button
+            onClick={() => setActiveTab("solutions")}
+            className={`flex-1 px-6 py-4 flex items-center justify-center gap-2 transition-all ${
+              activeTab === "solutions"
+                ? "bg-gradient-to-r from-[#0ea5e9]/10 to-[#a855f7]/10 border-b-2 border-[#0ea5e9] text-[#0ea5e9]"
+                : "text-gray-600 hover:bg-gray-50"
+            }`}
+          >
+            <CheckCircle className="w-5 h-5" />
+            Solutions ({problem.stats.solutions})
+          </button>
+        </div>
