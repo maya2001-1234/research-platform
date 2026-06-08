@@ -14,8 +14,8 @@ import { useState } from "react";
 export function UserProfile() {
   const [activeTab, setActiveTab] = useState("activity");
   const profile = {
-    name: "John Doe",
-    username: "johndoe",
+    name: "Dasun Kavinda",
+    username: "dasunkavinda",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=John",
     bio: "Machine Learning Engineer | PhD Candidate | Open Source Enthusiast",
     location: "San Francisco, CA",
