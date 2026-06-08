@@ -207,3 +207,37 @@ Looking for optimization techniques or alternative architectures that could work
                   </button>
                 </div>
               </div>
+
+              {discussions.map((comment) => (
+                <div key={comment.id} className="rounded-lg border border-gray-200 bg-gray-50 p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <img src={comment.avatar} alt={comment.author} className="w-10 h-10 rounded-full ring-2 ring-gray-200" />
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-gray-900 font-medium">{comment.author}</span>
+                        <span className="text-sm text-[#0ea5e9] font-medium">{comment.reputation} rep</span>
+                        {comment.isVerified && (
+                          <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-xs">
+                            <CheckCircle className="w-3 h-3" />
+                            Verified Solution
+                          </div>
+                        )}
+                      </div>
+                      <span className="text-sm text-gray-500">{comment.timeAgo}</span>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 mb-4">{comment.content}</p>
+                  <div className="flex items-center gap-4 text-sm text-gray-600">
+                    <button className="flex items-center gap-1 hover:text-[#0ea5e9] transition-colors">
+                      <ThumbsUp className="w-4 h-4" />
+                      {comment.upvotes}
+                    </button>
+                    <button className="flex items-center gap-1 hover:text-[#0ea5e9] transition-colors">
+                      <MessageSquare className="w-4 h-4" />
+                      Reply
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
