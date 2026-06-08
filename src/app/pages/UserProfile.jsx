@@ -120,6 +120,14 @@ export function UserProfile() {
             <p className="text-lg mb-4 text-gray-700">{profile.bio}</p>
 
             <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-6"></div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                <div className="text-2xl mb-1 bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent">
+                  {profile.reputation}
+                </div>
+                <div className="text-sm text-gray-600">Reputation</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
