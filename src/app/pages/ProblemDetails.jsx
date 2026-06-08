@@ -76,3 +76,37 @@ Looking for optimization techniques or alternative architectures that could work
       code: true
     }
   ];
+
+  return (
+    <div className="p-6 max-w-6xl mx-auto">
+      <div className="rounded-xl border border-gray-200 bg-white p-8 mb-6 shadow-sm">
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex-1">
+            <div
+              className={`inline-block px-3 py-1 rounded-full text-xs mb-3 ${
+                problem.difficulty === "Expert"
+                  ? "bg-purple-100 text-purple-700"
+                  : problem.difficulty === "Advanced"
+                  ? "bg-blue-100 text-blue-700"
+                  : "bg-green-100 text-green-700"
+              }`}
+            >
+              {problem.difficulty}
+            </div>
+            <h1 className="text-3xl mb-4 text-gray-900">{problem.title}</h1>
+            <div className="flex items-center gap-4 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <img src={problem.authorAvatar} alt={problem.author} className="w-6 h-6 rounded-full ring-2 ring-gray-200" />
+                <span>{problem.author}</span>
+                <span className="text-[#0ea5e9] font-medium">{problem.reputation} rep</span>
+              </div>
+              <span className="flex items-center gap-1">
+                <Clock className="w-4 h-4" />
+                {problem.postedAt}
+              </span>
+              <span className="flex items-center gap-1">
+                <Eye className="w-4 h-4" />
+                {problem.stats.views} views
+              </span>
+            </div>
+          </div>
