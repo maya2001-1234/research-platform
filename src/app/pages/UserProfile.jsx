@@ -7,6 +7,7 @@ import {
   Target,
   CheckCircle,
   MapPin,
+  LinkIcon,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -122,6 +123,12 @@ export function UserProfile() {
               <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
                 {profile.location}
+              </span>
+              <span className="flex items-center gap-2">
+                <LinkIcon className="w-4 h-4" />
+                <a href="#" className="text-[#0ea5e9] hover:underline">
+                  {profile.website}
+                </a>
               </span>
             </div>
           </div>
