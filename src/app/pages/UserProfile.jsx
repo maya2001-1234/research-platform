@@ -138,6 +138,12 @@ export function UserProfile() {
                 </div>
                 <div className="text-sm text-gray-600">Reputation</div>
               </div>
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                <div className="text-2xl mb-1 bg-gradient-to-r from-[#06b6d4] to-[#a855f7] bg-clip-text text-transparent">
+                  {profile.stats.solutions}
+                </div>
+                <div className="text-sm text-gray-600">Solutions</div>
+              </div>
             </div>
           </div>
         </div>
