@@ -1,5 +1,13 @@
 import { useParams } from "react-router-dom";
-import { Award, Star, Trophy, Flame, Target, CheckCircle } from "lucide-react";
+import {
+  Award,
+  Star,
+  Trophy,
+  Flame,
+  Target,
+  CheckCircle,
+  MapPin,
+} from "lucide-react";
 import { useState } from "react";
 
 export function UserProfile() {
@@ -109,7 +117,13 @@ export function UserProfile() {
               </div>
             </div>
             <p className="text-lg mb-4 text-gray-700">{profile.bio}</p>
-            
+
+            <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-6">
+              <span className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                {profile.location}
+              </span>
+            </div>
           </div>
         </div>
       </div>
