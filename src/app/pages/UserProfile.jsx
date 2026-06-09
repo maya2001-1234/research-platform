@@ -1,16 +1,21 @@
 import { useParams } from "react-router-dom";
-import { Award, Star, Trophy, Flame, Target, CheckCircle } from "lucide-react";
+import {
+  Award,
+  Star,
+  Trophy,
+  Flame,
+  Target,
+  CheckCircle,
+  MapPin,
+  LinkIcon,
+} from "lucide-react";
 import { useState } from "react";
 
 export function UserProfile() {
-  const { username = "" } = useParams();
-  const [activeTab, setActiveTab] = useState<
-  "activity" | "solutions" | "badges"
->("activity");
-
+  const [activeTab, setActiveTab] = useState("activity");
   const profile = {
-    name: "John Doe",
-    username: "johndoe",
+    name: "Dasun Kavinda",
+    username: "dasunkavinda",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=John",
     bio: "Machine Learning Engineer | PhD Candidate | Open Source Enthusiast",
     location: "San Francisco, CA",
@@ -87,9 +92,106 @@ export function UserProfile() {
     },
   ];
   return (
-    <div>
-      User Profile
-      <h1>{username}</h1>
+    <div className="p-6">
+      <div className="max-w-6xl mx-auto space-y-6">
+        <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+          <div className="h-32 bg-blue-900" />
+          <div className="px-8 pb-8">
+            <div className="flex items-end gap-6 -mt-16 mb-6">
+              <img
+                src={profile.avatar}
+                alt={profile.name}
+                className="w-32 h-32 rounded-2xl border-4 border-white shadow-xl"
+              />
+              <div className="flex-1 mt-16">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h1 className="text-3xl mb-1 text-gray-900">
+                      {profile.name}
+                    </h1>
+                    <p className="text-gray-600">@{profile.username}</p>
+                  </div>
+                  <button className="px-6 py-2 rounded-lg bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] text-white hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/30">
+                    Edit Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p className="text-lg mb-4 text-gray-700">{profile.bio}</p>
+
+            <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-6">
+              <span className="flex items-center gap-2"></span>
+              <span className="flex items-center gap-2"></span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                <div className="text-2xl mb-1 bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent">
+                  {profile.reputation}
+                </div>
+                <div className="text-sm text-gray-600">Reputation</div>
+              </div>
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                <div className="text-2xl mb-1 bg-gradient-to-r from-[#06b6d4] to-[#a855f7] bg-clip-text text-transparent">
+                  {profile.stats.solutions}
+                </div>
+                <div className="text-sm text-gray-600">Solutions</div>
+              </div>
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                <div className="text-2xl mb-1 bg-gradient-to-r from-[#a855f7] to-[#0ea5e9] bg-clip-text text-transparent">
+                  {profile.stats.problems}
+                </div>
+                <div className="text-sm text-gray-600">Problems</div>
+              </div>
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                <div className="text-2xl mb-1 bg-gradient-to-r from-[#10b981] to-[#06b6d4] bg-clip-text text-transparent">
+                  {profile.streak}
+                </div>
+                <div className="text-sm text-gray-600">Day Streak</div>
+              </div>
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                <div className="text-2xl mb-1 bg-gradient-to-r from-[#0ea5e9] to-[#a855f7] bg-clip-text text-transparent">
+                  Level {profile.level}
+                </div>
+                <div className="text-sm text-gray-600">Researcher</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+          <div className="flex border-b border-gray-200">
+            <button
+              onClick={() => setActiveTab("activity")}
+              className={`flex-1 px-6 py-4 transition-all ${
+                activeTab === "activity"
+                  ? "bg-blue-900 border-b-2 border-[#0ea5e9] text-[white]"
+                  : "text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Recent Activity
+            </button>
+            <button
+              onClick={() => setActiveTab("solutions")}
+              className={`flex-1 px-6 py-4 transition-all ${
+                activeTab === "solutions"
+                  ? "bg-blue-900 border-b-2 border-[#0ea5e9] text-[white]"
+                  : "text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Top Solutions
+            </button>
+            <button
+              onClick={() => setActiveTab("badges")}
+              className={`flex-1 px-6 py-4 transition-all ${
+                activeTab === "badges"
+                  ? "bg-blue-900 border-b-2 border-[#0ea5e9] text-[white]"
+                  : "text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Achievements
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
