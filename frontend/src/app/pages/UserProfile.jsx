@@ -179,16 +179,6 @@ export function UserProfile() {
             >
               Top Solutions
             </button>
-            <button
-              onClick={() => setActiveTab("badges")}
-              className={`flex-1 px-6 py-4 transition-all ${
-                activeTab === "badges"
-                  ? "bg-blue-900 border-b-2 border-[#0ea5e9] text-[white]"
-                  : "text-gray-600 hover:bg-gray-50"
-              }`}
-            >
-              Achievements
-            </button>
           </div>
         </div>
       </div>
