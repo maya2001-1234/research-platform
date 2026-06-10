@@ -20,6 +20,21 @@ export function LoginPage() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+    const handleLogin = async (e) => {
+      e.preventDefault();
+      setError("");
+      setLoading(true);
+
+      try {
+        await loginUser(formData);
+        navigate("/app");
+      } catch (err) {
+        setError(err.message || "Login failed");
+      } finally {
+        setLoading(false);
+      }
+    };
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#d9f1ff] via-[#e8f2ff] to-[#f3d9ff] text-gray-900 flex items-center justify-center px-6 py-12 relative overflow-hidden">
