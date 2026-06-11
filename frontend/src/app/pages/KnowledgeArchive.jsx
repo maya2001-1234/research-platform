@@ -36,3 +36,20 @@ export function KnowledgeArchive() {
       name: fieldName,
     })),
   ];
+
+  useEffect(() => {
+    const fetchArchiveItems = async () => {
+      try {
+        setLoading(true);
+        setError("");
+
+        const data = await getArchiveItems();
+        const archiveList = Array.isArray(data) ? data : data.archiveItems || [];
+
+        setArchiveItems(archiveList);
+      } catch (err) {
+        setError(err.message || "Failed to load archive items");
+      } finally {
+        setLoading(false);
+      }
+    };
