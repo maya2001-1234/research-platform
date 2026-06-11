@@ -88,3 +88,15 @@ export function KnowledgeArchive() {
 
     return `http://localhost:5000${filePath}`;
   };
+
+  const filteredArchiveItems = archiveItems.filter((item) => {
+    const search = searchTerm.toLowerCase();
+
+    const matchesSearch =
+      item.title?.toLowerCase().includes(search) ||
+      item.summary?.toLowerCase().includes(search) ||
+      item.solution_text?.toLowerCase().includes(search) ||
+      item.description?.toLowerCase().includes(search) ||
+      item.field_name?.toLowerCase().includes(search) ||
+      item.post_author?.toLowerCase().includes(search) ||
+      item.solution_author?.toLowerCase().includes(search);
