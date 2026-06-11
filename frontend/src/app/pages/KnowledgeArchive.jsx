@@ -79,3 +79,12 @@ export function KnowledgeArchive() {
     return "bg-green-100 text-green-700 dark:bg-green-950/40 dark:text-green-300";
   };
 
+   const getFileUrl = (filePath) => {
+    if (!filePath) return "#";
+
+    if (filePath.startsWith("http")) {
+      return filePath;
+    }
+
+    return `http://localhost:5000${filePath}`;
+  };
