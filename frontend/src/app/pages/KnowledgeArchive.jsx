@@ -100,3 +100,13 @@ export function KnowledgeArchive() {
       item.field_name?.toLowerCase().includes(search) ||
       item.post_author?.toLowerCase().includes(search) ||
       item.solution_author?.toLowerCase().includes(search);
+
+      const matchesDifficulty =
+      selectedDifficulty === "all" ||
+      item.difficulty_level === selectedDifficulty;
+
+    const matchesCategory =
+      selectedCategory === "all" || item.field_name === selectedCategory;
+
+    return matchesSearch && matchesDifficulty && matchesCategory;
+  });
