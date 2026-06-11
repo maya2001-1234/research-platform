@@ -53,3 +53,16 @@ export function KnowledgeArchive() {
         setLoading(false);
       }
     };
+
+    fetchArchiveItems();
+  }, []);
+
+  const formatDate = (dateString) => {
+    if (!dateString) return "Recently";
+
+    return new Date(dateString).toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  };
