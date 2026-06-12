@@ -234,6 +234,13 @@ export function LandingPage() {
                 </p>
               </div>
 
-
+              <div className="md:border-x border-slate-200">
+                <p className="text-sm font-medium text-slate-500 mb-1">
+                  Focused on
+                </p>
+                <p className="text-lg font-bold text-slate-950">
+                  Practical Problem Solving
+                </p>
+              </div>
 
 
