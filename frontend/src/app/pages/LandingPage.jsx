@@ -117,4 +117,21 @@ export function LandingPage() {
                   <div className="text-sm text-slate-500">Active Users</div>
                 </div>
 
+                <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm">
+                  <div className="text-2xl font-extrabold text-violet-600">
+                    5K+
+                  </div>
+                  <div className="text-sm text-slate-500">Solved Problems</div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm">
+                  <div className="text-2xl font-extrabold text-cyan-600">
+                    15K+
+                  </div>
+                  <div className="text-sm text-slate-500">Collaborations</div>
+                </div>
+              </div>
+            </div>
+
+
 
