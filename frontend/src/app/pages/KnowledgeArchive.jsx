@@ -152,3 +152,38 @@ export function KnowledgeArchive() {
                 </div>
               </div>
             </div>
+
+            <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+              <h3 className="mb-4 text-gray-900 dark:text-gray-100">Fields</h3>
+
+              <div className="space-y-2">
+                {categories.map((category) => {
+                  const count =
+                    category.id === "all"
+                      ? archiveItems.length
+                      : archiveItems.filter(
+                          (item) => item.field_name === category.id
+                        ).length;
+
+                  return (
+                    <button
+                      key={category.id}
+                      onClick={() => setSelectedCategory(category.id)}
+                      className={`w-full text-left px-3 py-2 rounded-lg transition-all ${
+                        selectedCategory === category.id
+                          ? "bg-gradient-to-r from-[#0ea5e9]/10 to-[#a855f7]/10 border border-[#0ea5e9] text-[#0ea5e9] shadow-sm dark:from-[#0ea5e9]/20 dark:to-[#a855f7]/20 dark:text-[#38bdf8]"
+                          : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm">{category.name}</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400">
+                          {count}
+                        </span>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </aside>
