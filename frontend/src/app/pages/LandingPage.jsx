@@ -109,3 +109,12 @@ export function LandingPage() {
                 </Link>
               </div>
 
+              <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-xl">
+                <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm">
+                  <div className="text-2xl font-extrabold text-blue-600">
+                    10K+
+                  </div>
+                  <div className="text-sm text-slate-500">Active Users</div>
+                </div>
+
+
