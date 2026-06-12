@@ -256,4 +256,20 @@ export function LandingPage() {
         </div>
       </section>
 
+       {/* Features */}
+      <section className="py-16 px-6 bg-gradient-to-b from-white/60 via-blue-50/70 to-violet-50/60">
+        <div className="container mx-auto max-w-7xl">
+          <div className="max-w-2xl mx-auto text-center mb-10">
+            <div className="inline-flex rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 mb-4">
+              Platform Features
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-950 mb-4">
+              Why CollabSolve?
+            </h2>
+
+            <p className="text-lg text-slate-600">
+              A complete problem-solving workspace for students, researchers, and developers to collaborate, verify solutions, and grow shared knowledge.
+            </p>
+          </div>
 
