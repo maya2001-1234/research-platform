@@ -92,3 +92,20 @@ export function LandingPage() {
                 complex challenges together.
               </p>
 
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/register"
+                  className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold hover:shadow-xl hover:shadow-blue-500/25 hover:-translate-y-0.5 transition-all"
+                >
+                  Start Collaborating
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+
+                <Link
+                  to="/login"
+                  className="inline-flex items-center justify-center px-7 py-4 rounded-2xl bg-white text-slate-800 font-semibold border border-slate-200 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm"
+                >
+                  Explore Platform
+                </Link>
+              </div>
+
