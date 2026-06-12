@@ -208,5 +208,18 @@ export function LandingPage() {
                     </p>
                   </div>
 
+                  <div className="rounded-2xl border border-slate-200 bg-violet-50 p-5">
+                    <div className="w-10 h-10 rounded-xl bg-violet-600 text-white flex items-center justify-center mb-4">
+                      <Search className="w-5 h-5" />
+                    </div>
+                    <h4 className="font-bold text-slate-950">Smart Discovery</h4>
+                    <p className="text-sm text-slate-600 mt-1">
+                      Find relevant discussions faster.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
