@@ -110,3 +110,17 @@ export function KnowledgeArchive() {
 
     return matchesSearch && matchesDifficulty && matchesCategory;
   });
+
+  return (
+    <div className="p-6 text-gray-900 dark:text-gray-100">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl mb-2 text-gray-900 dark:text-gray-100">
+            Knowledge Archive
+          </h1>
+
+          <p className="text-gray-600 dark:text-gray-400">
+            Browse solved problems with verified solutions and supporting
+            documents.
+          </p>
+        </div>
